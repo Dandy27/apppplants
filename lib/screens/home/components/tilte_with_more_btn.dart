@@ -7,7 +7,7 @@ class TitleWithMoreBtn extends StatelessWidget {
     Key? key, required this.title, required this.press,
   }) : super(key: key);
   final String title;
-  final Function press;
+  final VoidCallback press;
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +24,7 @@ class TitleWithMoreBtn extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                   primary: kPrimaryColor),
-              //TODO: RESOLVER PRESS NA FUNÇÃO
-              onPressed: (){},
+              onPressed: press,
               child: Text('More'))
         ],
       ),
